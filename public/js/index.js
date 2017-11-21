@@ -27,11 +27,17 @@ $(function () {
   $('#nav-menu').on('click', function () {
     if (flag) {
       $('#head-nav').show();
-      $('.head').css('background', '#fff');
+      $('.head').css({
+        'background':'#4e495b',
+        'border-bottom': '1px solid #f6f6f6'
+      });
       flag = !flag;
     } else {
       $('#head-nav').hide();
-      $('.head').css('background', 'rgba(255, 255, 255, 0)');
+      $('.head').css({
+        'background':'rgba(255, 255, 255, 0)',
+        'border-bottom': '0'
+      });
       flag = !flag;
     }
   })
