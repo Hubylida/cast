@@ -59,5 +59,9 @@ for(let i = 0; i < 10; i++){
   })
 }
 
+router.get('/intro',function(req,res,next){
+  res.render('intro');
+})
+
 
 module.exports = router;
