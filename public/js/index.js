@@ -1,6 +1,5 @@
 $(function () {
-  $("#slider").easySlider({});
-
+  startSlider();
   function actStart() {
     var l = $('.nav-circle').length;
     for (let i = 0; i < l; i++) {
@@ -54,4 +53,6 @@ $(function () {
     })
   }
   scroll();
+
+  console.log("by Yuan!")
 });

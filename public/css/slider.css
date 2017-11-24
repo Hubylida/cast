@@ -1,53 +1,86 @@
-
-/*--------------SLIDER----------------*/
-
-#slider {
-	width: 100%;
+.window,
+.pic-list,
+.pic {
+    height: 500px;
 }
 
-
-/*--------------CONTROLS--------------*/
-
-/*position controls*/
-.controls li {
-	top: 50%;
-	margin-top: -30px;
+.window {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
 }
 
-.controls li:nth-child(1) {
-	left: 0;
+.pic-list {
+    width: 300%;
+    position: absolute;
+    left: 0;
+    transition: left 800ms ease-out;
 }
 
-.controls li:nth-child(2) {
-	right: 0;
+.pic {
+    width: 100vw;
+    float: left;
+    background-size: cover;
+    background-position: center 0;
 }
 
-
-/*------------PAGINATION------------*/
-
-/*style pagination*/
-.pagination li {
-	background-color: #ddd;
+.btn-control {
+    padding: 20px 0;
+    background: #ddd;
+    height: 61px;
+    text-align: center;
 }
 
-.pagination li.active {
-	background-color: #000;
+.btn-wrap {
+    display: inline;
 }
 
-
-/*-------------HELPERS----------------*/
-
-.responsive {
-	width: 100%;
-	height: auto;
+.btn {
+    display: inline-block;
+    width: 45px;
+    height: 21px;
+    margin: 0 .5em;
+    padding: .5em 0;
+    background-clip: content-box;
+    background-color: #D2C0C0;
+    cursor: pointer;
+    user-select: none;
 }
 
-.clearfix:after {
-	content: "";
-	display: table;
-	clear: both;
+.active {
+    display: inline-block;
+    width: 45px;
+    height: 21px;
+    padding: 8px 0;
+    background-clip: content-box;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    user-select: none;
+}
+@media screen and (max-width: 1024px) and (min-width:768px){
+    .pic-list{
+        transition: left 400ms ease-out;
+    }
+}
+@media screen and (max-width:768px)and(min-width:414px) {
+    .window,
+    .pic-list,
+    .pic {
+        height: 250px;
+    }
+    .pic-list{
+        transition: left 200ms ease-out;
+    }
 }
 
-img {
-	display: block;
+@media screen and (max-width:414px) {
+    .window,
+    .pic-list,
+    .pic {
+        height: 200px;
+    }
+    .pic-list{
+        transition: left 400ms ease-out;
+    }
 }

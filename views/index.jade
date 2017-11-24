@@ -10,7 +10,6 @@ html(lang="en")
     link(rel="stylesheet", href="css/index.css")
     link(rel="stylesheet", href="css/slider.css")
     script(type='text/javascript', src="js/jquery.min.js")
-    script(type='text/javascript', src="js/slider.js")
     title 社团
   body
     section#header
@@ -36,23 +35,19 @@ html(lang="en")
         div#nav-menu 
 
     div#slider-wrap
-      div#slider 
-        ul.slides 
-          li
-            img(src="img/1.png", alt="").responsive
-          li
-            img(src="img/2.png", alt="").responsive
-          li
-            img(src="img/3.png", alt="").responsive
-        ul.controls 
-          li 
-            img(src="img/prev.png", alt="previous")
-          li 
-            img(src="img/next.png", alt="next")
-        ul.pagination
-          li.active 
-          li
-          li
+      div#slider
+        div.window
+          div.pic-list
+            a(href='act_1').pic
+              img(src="img/1.jpg", alt="").img
+            a(href='act_2').pic
+              img(src="img/2.jpg", alt="").img
+            a(href='act_3').pic      
+              img(src="img/3.jpg", alt="").img
+        div.btn-control
+          div.btn.active               
+          div.btn               
+          div.btn
     section#branch-container
       p.title 部门介绍
       div.row#branch-contain
@@ -125,5 +120,6 @@ html(lang="en")
         a(href="activities") 活动
         a(href="intro") 简介
       p © 2010-2017 
+  script(type='text/javascript', src="js/slider.js")
   script(type='text/javascript', src='js/index.js')
   

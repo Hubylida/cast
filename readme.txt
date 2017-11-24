@@ -17,3 +17,6 @@ node bib/www
             
             
             ->简介(intro)
+
+技术栈：
+node(express) + bootstrap + jQuery
