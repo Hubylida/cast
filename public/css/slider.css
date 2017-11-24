@@ -1,86 +1,137 @@
 .window,
 .pic-list,
 .pic {
-    height: 500px;
+  height: 500px;
 }
 
 .window {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
 }
 
 .pic-list {
-    width: 300%;
-    position: absolute;
-    left: 0;
-    transition: left 800ms ease-out;
+  width: 300%;
+  position: absolute;
+  left: 0;
+  transition: left 800ms ease-out;
 }
 
 .pic {
-    width: 100vw;
-    float: left;
-    background-size: cover;
-    background-position: center 0;
+  width: 100vw;
+  float: left;
+  background-size: cover;
+  background-position: center 0;
+  position: relative;
+}
+
+.pic::after {
+  content: "Hello World";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 5em;
+  /* display: none; */
+}
+
+.pic-active {
+  width: 100vw;
+  float: left;
+  background-size: cover;
+  background-position: center 0;
+  position: relative;
+}
+
+.pic-active::after {
+  content: "Hello World";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 5em;
+  /* display: none; */
+}
+
+.t {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2em;
 }
 
 .btn-control {
-    padding: 20px 0;
-    background: #ddd;
-    height: 61px;
-    text-align: center;
+  padding: 20px 0;
+  background: #ddd;
+  height: 61px;
+  text-align: center;
 }
 
 .btn-wrap {
-    display: inline;
+  display: inline;
 }
 
 .btn {
-    display: inline-block;
-    width: 45px;
-    height: 21px;
-    margin: 0 .5em;
-    padding: .5em 0;
-    background-clip: content-box;
-    background-color: #D2C0C0;
-    cursor: pointer;
-    user-select: none;
+  display: inline-block;
+  width: 45px;
+  height: 21px;
+  margin: 0 .5em;
+  padding: .5em 0;
+  background-clip: content-box;
+  background-color: #D2C0C0;
+  cursor: pointer;
+  user-select: none;
 }
 
 .active {
-    display: inline-block;
-    width: 45px;
-    height: 21px;
-    padding: 8px 0;
-    background-clip: content-box;
-    background-color: #fff;
-    cursor: pointer;
-    border-radius: 2px;
-    user-select: none;
-}
-@media screen and (max-width: 1024px) and (min-width:768px){
-    .pic-list{
-        transition: left 400ms ease-out;
-    }
-}
-@media screen and (max-width:768px)and(min-width:414px) {
-    .window,
-    .pic-list,
-    .pic {
-        height: 250px;
-    }
-    .pic-list{
-        transition: left 200ms ease-out;
-    }
+  display: inline-block;
+  width: 45px;
+  height: 21px;
+  padding: 8px 0;
+  background-clip: content-box;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  user-select: none;
 }
 
-@media screen and (max-width:414px) {
-    .window,
-    .pic-list,
-    .pic {
-        height: 200px;
-    }
-    .pic-list{
-        transition: left 400ms ease-out;
-    }
+@media screen and (max-width: 1024px) and (min-width:768px) {
+  .pic-list {
+    transition: left 400ms ease-out;
+  }
+  .pic::after {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width:767px) and (min-width:414px) {
+  .window,
+  .pic-list,
+  .pic {
+    height: 250px;
+  }
+  .pic-list {
+    transition: left 200ms ease-out;
+  }
+  .pic::after {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width:413px) {
+  .window,
+  .pic-list,
+  .pic {
+    height: 200px;
+  }
+  .pic-list {
+    transition: left 400ms ease-out;
+  }
+  .pic::after {
+    font-size: 1.2em;
+  }
 }

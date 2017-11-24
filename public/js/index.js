@@ -45,10 +45,28 @@ $(function () {
     $(window).scroll(function () {
       if ($(window).scrollTop() > 100) {
         $('.head').css({
-          'background': '#4e495b'
+          'background': '#fef6ef'
+        });
+        $('#name').css({
+          'color': '#222'
+        });
+        $('.nav-item a').css({
+          'color': '#222'
+        });
+        $('.nav-item').css({
+          'color': '#222'
         });
       } else {
         $('.head').css('background', 'rgba(255, 255, 255, 0)');
+        $('#name').css({
+          'color': '#f6f6f6'
+        });
+        $('.nav-item a').css({
+          'color': '#f6f6f6'
+        });
+        $('.nav-item').css({
+          'color': '#f6f6f6'
+        });
       }
     })
   }
