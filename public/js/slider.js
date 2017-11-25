@@ -8,9 +8,8 @@ function startSlider() {
       i = 0;
     }
     picList.style.left = i * (-100) + 'vw';
-    setColor(i, btnArray[i]);
+    setColor(btnArray[i]);
     i = i + 1;
-
   }, 3900);
 
   function btnControl() {
@@ -20,13 +19,13 @@ function startSlider() {
       btn[i].addEventListener('click', function () {
         clearInterval(auto);
         picList.style.left = i * (-100) + 'vw';
-        setColor(i, this);
+        setColor(this);
       });
     }
   }
   btnControl();
 
-  function setColor(i, e) {
+  function setColor(e) {
     var btnArray = getBtns();
     var currentVal = e.getAttribute('class'); //获取当前btn按钮的class值
     for (let i = 0; i < btnArray.length; i++) {

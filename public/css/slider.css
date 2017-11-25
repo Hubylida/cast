@@ -11,7 +11,7 @@
 }
 
 .pic-list {
-  width: 300%;
+  width: 300vw;
   position: absolute;
   left: 0;
   transition: left 800ms ease-out;
@@ -33,10 +33,9 @@
   transform: translate(-50%, -50%);
   color: #fff;
   font-size: 5em;
-  /* display: none; */
 }
 
-.pic-active {
+/* .pic-active {
   width: 100vw;
   float: left;
   background-size: cover;
@@ -52,8 +51,7 @@
   transform: translate(-50%, -50%);
   color: #fff;
   font-size: 5em;
-  /* display: none; */
-}
+} */
 
 .t {
   position: absolute;

@@ -22,55 +22,61 @@ $(function () {
     });
   }
   actControl();
-  var flag = true;
-  $('#nav-menu').on('click', function () {
-    if (flag) {
-      $('#head-nav').show();
-      $('.head').css({
-        'background':'#4e495b',
-        'border-bottom': '1px solid #f6f6f6'
-      });
-      flag = !flag;
-    } else {
-      $('#head-nav').hide();
-      $('.head').css({
-        'background':'rgba(255, 255, 255, 0)',
-        'border-bottom': '0'
-      });
-      flag = !flag;
-    }
-  })
+  function navControl(){
+    var flag = true;
+    $('#nav-menu').on('click', function () {
+      if (flag) {
+        $('#head-nav').show();
+        $('.head').css({
+          'background':'#4e495b',
+          'border-bottom': '1px solid #f6f6f6'
+        });
+        flag = !flag;
+      } else {
+        $('#head-nav').hide();
+        $('.head').css({
+          // 'background':'rgba(255, 255, 255, 0)',
+          'border-bottom': '0'
+        });
+        flag = !flag;
+      }
+    });
+    // $('#head-nav').on('click',function(){
+    //   if(!flag){
+    //     $('#head-nav').hide();
+    //     $('.head').css({
+    //       'background': 'rgba(255, 255, 255, 0)',
+    //       'border-bottom': '0'
+    //     });
+    //     flag = !flag;
+    //   }
+    // });
+  }
+  
+  navControl();
 
   function scroll() {
     $(window).scroll(function () {
       if ($(window).scrollTop() > 100) {
         $('.head').css({
-          'background': '#fef6ef'
-        });
-        $('#name').css({
-          'color': '#222'
-        });
-        $('.nav-item a').css({
-          'color': '#222'
-        });
-        $('.nav-item').css({
-          'color': '#222'
+          'background': '#4e495b'
         });
       } else {
         $('.head').css('background', 'rgba(255, 255, 255, 0)');
-        $('#name').css({
-          'color': '#f6f6f6'
-        });
-        $('.nav-item a').css({
-          'color': '#f6f6f6'
-        });
-        $('.nav-item').css({
-          'color': '#f6f6f6'
-        });
       }
     })
   }
   scroll();
+  // function rehover(){
+  //   $($('nav-item').eq(2)).on('click',function(){
+  //     if($(window).width < 500){
+  //       $(this).removeClass('nav-item').addClass('nav-item-click');
+  //     }else{
+  //       $(this).removeClass('nav-item-click').addClass('nav-item');
+  //     }
+  //   })
+  // }
+  // rehover();
 
   console.log("by Yuan!")
 });

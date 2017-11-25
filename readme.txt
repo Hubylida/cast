@@ -7,10 +7,10 @@ node bib/www
 
 结构示意图
 
-                      部门一(branch)
-            ->部门  -> 部门二(branch)
-                      部门三(branch)
-                      部门四(branch)
+                     部门一(branch)
+            ->部门 -> 部门二(branch)
+                     部门三(branch)
+                     部门四(branch)
 
 首页(index)  ->活动(activities) ->  单个活动页面(activity)
             
@@ -20,3 +20,6 @@ node bib/www
 
 技术栈：
 node(express) + bootstrap + jQuery
+小组成员： 
+队长：赵恒远
+队员：林禹辰、黄翊展

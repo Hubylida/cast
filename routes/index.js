@@ -33,7 +33,7 @@ router.get('/activities',function(req,res,next){
   res.render('activities')
 })
 
-for(let i = 0; i < 10; i++){
+for(let i = 0; i < 12; i++){
   router.get('/act_' + (i+1),function(req,res,next){
     res.render('activity',{
       "title" : activity[i].title,

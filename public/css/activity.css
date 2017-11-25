@@ -19,7 +19,7 @@ a {
   top: 0;
   left: 0;
   border-bottom: 1px solid #ddd;
-  /* background: rgba(255, 255, 255, 0); */
+  background: #fef6ef;
   z-index: 999;
 }
 
@@ -146,6 +146,10 @@ a {
 }
 
 @media screen and (max-width: 500px) {
+  .head {
+    position: fixed;
+    border-bottom: 1px solid #ddd;
+  }
   #name {
     font-size: 1em;
     margin-left: 3em;
@@ -155,9 +159,9 @@ a {
     width: 1.2em;
     height: 1em;
     padding: .2em 0;
-    border-top: .2em solid #f6f6f6;
-    border-bottom: .2em solid #f6f6f6;
-    background: #f6f6f6;
+    border-top: .2em solid #222;
+    border-bottom: .2em solid #222;
+    background: #222;
     background-clip: content-box;
     position: absolute;
     top: 1.2em;
@@ -166,9 +170,9 @@ a {
   #head-nav {
     width: 100vw;
     height: 100vh;
-    background: #4e495b;
+    background: #fef6ef;
     display: none;
-    position: absolute;
+    position: fixed;
     top: 56px;
     left: 0;
   }
@@ -177,13 +181,14 @@ a {
     width: 100vw;
     padding-left: 50px;
     text-align: left;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ddd;
   }
   .nav-item:hover {
     background: rgba(255, 255, 255, 0);
   }
-  #nav-list a {
-    padding-left: 50px;
+  #nav-list a::before {
+    content: ">";
+    margin-right: 1.5em;
   }
   #act-nav {
     display: none;
@@ -191,6 +196,19 @@ a {
   #intro-contain p {
     padding: 1em;
     font-size: 13px;
+  }
+  #main {
+    margin-top: 4em;
+    border-radius: 0;
+    box-shadow: 0 0 0;
+    background: #fef6ef;
+  }
+  #main img {
+    border-radius: 0;
+  }
+  #main p {
+    font-size: 14px;
+    padding: 0;
   }
   .foot-nav {
     width: 10em;
